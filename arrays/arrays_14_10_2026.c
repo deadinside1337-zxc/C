@@ -56,9 +56,9 @@ int main () {
 	for(int i = 0; i < n; i = i + 2) {
 		printf("%d \n", arr[i]);
 	}
-	printf("%d\n", &summa);
-	printf("%d\n", &index_first_max);
-	printf("%d\n", &index_last_min);
-	printf("%d\n", &count_x);
+	printf("%d\n", summa);
+	printf("%d\n", index_first_max);
+	printf("%d\n", index_last_min);
+	printf("%d\n", count_x);
 	return 0;
 }
