@@ -1,4 +1,9 @@
 //практическая 14.10.2026
+//1. Найти индекс первого максимального значения
+//2. Найти кол-во значений, равных максимальному
+//3. Найти индекс последнего минимального значения
+//4. Сумма.
+//5. Посчитать сколько раз встречается число X.
 
 #include <stdio.h>
 int main () {
@@ -6,10 +11,8 @@ int main () {
 	int n;
 	int index_first_max;
 	int index_last_min;
-	int summa = 0;
 	int x;
 	scanf("%d", &x);
-	int count_x = 0;
 	scanf("%d", &n);
 	
 //запись
@@ -18,6 +21,7 @@ int main () {
 	}
 	
 //поиск суммы
+	int summa = 0;
 	for(int i = 0; i < n; i = i + 1) {
 		summa = summa + arr[i];
 	}
@@ -48,6 +52,7 @@ int main () {
 	}
 	
 //число x. посчитать число вхождений
+	int count_x = 0;
 	for(int i = 0; i < n; i = i + 1) {
 		if(arr[i] == x) {
 			count_x = count_x + 1;
