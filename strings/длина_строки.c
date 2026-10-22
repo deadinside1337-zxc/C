@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <string.h>
 
-int string_len(char s[]) { //функция
+
+int string_len(char s[]) { //функция которая считает длину строки
 		int len = 0;
 	while(s[len] != '\0'){
 		len = len + 1;
