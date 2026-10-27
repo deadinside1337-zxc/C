@@ -14,18 +14,7 @@ int max_in_matrix(int matrix[][MAXCOLS], int rows, int cols) {
 	return max;
 }
 
-/*int index_of_max_in_matrix(int matrix[][MAXCOLS], int rows, int cols) {
-	int index_max[2];
-	for(int i = 0; i < rows; i = i + 1) {
-		for(int j = 0; j < cols; j = j + 1) {
-			if(matrix[i][j] > max) {
-				index_max[1] = i;
-				index_max[2] = j;
-			}
-		}
-	}
-	return index_max;
-}*/
+
 int main () {
 	int matrix[MAXROWS][MAXCOLS];
 	int rows, cols;
@@ -36,13 +25,33 @@ int main () {
 		}
 	}
 
+	
 	for(int i = 0; i < rows; i = i + 1) {
 		for(int j = 0; j < cols; j = j + 1) {
-			printf("%d", &matrix[i][j]);
+			printf("%d ", matrix[i][j]);
 		}
 		printf("\n");
 	}
+	
+	
 	int result = max_in_matrix(matrix, rows, cols);
+	
+	
+	int index_max[2];
+	for(int i = 0; i < rows; i = i + 1) {
+		for(int j = 0; j < cols; j = j + 1) {
+			if(matrix[i][j] == result) {
+				index_max[0] = i;
+				index_max[1] = j;
+			}
+		}
+	}
+	
+	
 	printf("max in matrix: %d\n", result);
+	printf("index of max: ");
+	for(int i = 0; i < 2; i = i + 1) {
+		printf("%d ", index_max[i]);
+	}
 	return 0;
 }
